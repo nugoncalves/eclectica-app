@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body { 
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#circle{
+  border: solid rgb(48, 48, 48) 3px;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  position:absolute;
+  top: -30px;
+  left: 15px;
+}
+
+.sheet-outer {
+    margin: 0;
+}
+
+/* Cria uma nova página */
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sheet-outer.smallLabel .sheet { 
+  width: 150mm; 
+  height: 102mm; 
+}
+
+.sheet.padding-5mm { 
+  padding: 3mm
+}
+
+.sheet-content{
+  padding: 5px;
+}
+
+.page-break{
+  page-break-after: always;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-small{
+  font-size: 0.5rem;
+}
+
+.text-label{
+  font-size: 0.7rem;
+}
+
+
+@media screen {
+  body { 
+      background: #e0e0e0;
+      padding: 5px 
+  }
+ 
+  .sheet {
+      background: white;
+      box-shadow: 0 .5mm 2mm rgba(0,0,0,.3); 
+      margin: 5mm auto;
+  }
+}

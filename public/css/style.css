@@ -1,0 +1,222 @@
+/* Stylesheet Personalizado */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Variáveis Root */
+:root {
+  --body-bg-color: #dfe5eb;
+  --header-bg-color: #f1f8ff;
+  --scroll-bg-color: #acb0b4;
+  --header-height: 2.5rem;
+  --nav-width: 68px;
+  --first-color: #393939;
+  --first-color-light: #bbb8c6;
+  --white-color: #f7f6fb;
+  --light-blue-color: #dfe5eb91;
+  --body-font: 'Lato', sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100
+}
+
+/* Styling Geral */
+
+*,
+::before,
+::after {
+  box-sizing: border-box
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-bg-color);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bg-color);
+  border-radius: 10em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #E5E3E2;
+}
+
+/*
+| ---------------------------------------
+| Styling Texto
+| ---------------------------------------
+*/
+
+.p-small {
+  font-size: 0.9rem;
+}
+
+.p-xtra-small {
+  font-size: 0.75rem;
+}
+
+a {
+  text-decoration: none
+}
+
+/*
+| ----------------------------------------
+| Main Header
+| ----------------------------------------
+*/
+
+.stickyToogler{
+  height: 1px;
+}
+
+.pageNav{
+  background-color: var(--light-blue-color);
+  backdrop-filter: blur(5px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+/*
+| Header das Listas Sticky ao Main Header |
+*/
+
+.list-header{
+  position: sticky;
+  top: 62px;
+  z-index: 10;
+}
+
+.listOnForm  div.list-header {
+  top:0px;
+  z-index: 0;
+}
+
+/* HTMX INDICATORS */
+.htmx-indicator{
+    display:none;
+}
+.htmx-request .htmx-indicator{
+    display:inline;
+}
+.htmx-request.htmx-indicator{
+    display:inline;
+}
+
+/*
+| offset para anchor em Manual de Utilizador |
+*/
+
+.userManualAnchor{
+    display: block;
+    position: relative;
+    top: -75px;
+    visibility: hidden;
+}
+
+/*
+|--------------------
+| CONTENT INFO DATA
+|--------------------
+*/
+.side-data {
+  background-color: rgb(232, 216, 182);
+}
+
+.infoCardTitle{
+  background-color: var(--light-blue-color);
+}
+
+/*
+| ----------------------------------------
+| Elementos "Pop up" [OffCanvas & Modal]
+| ----------------------------------------
+*/
+
+/* OFFCANVAS */
+.offcanvas-size-xxxl{
+  min-width: 80%;
+}
+
+.offcanvas-size-xxl{
+  min-width: 50%;
+}
+
+.offcanvas-size-xl{
+  min-width: 35%;
+}
+
+
+/* PRINTING TABLES */
+table.table-print {
+    padding: 0px !important;
+    width: 100%;
+};
+
+/*
+|-----------------
+| INPUT
+|-----------------
+*/
+
+/* CKEditor Field */
+.ck-editor__editable[role="textbox"] {
+  /* editing area */
+  height: 350px;
+  line-height: 1.5rem;
+  border-radius: 0px 0px 0.375rem 0.375rem !important;
+}
+
+.ck {
+  border-radius:0.375rem 0.375rem 0px 0px !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*
+|-----------------
+| MEDIA QUERIES
+|-----------------
+*/
+
+@media (max-width: 1440px){
+
+  /* OFFCANVAS */
+  .offcanvas-size-xxl, .offcanvas-size-xl {
+    min-width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+.list-header{
+  position: static;
+  z-index: 0;
+}
+
+  .titleMenuButton{
+    margin-top: 0.5rem;
+    --bs-btn-padding-y: .25rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: .75rem;
+  }
+
+  /* OFFCANVAS */
+  .offcanvas-size-xxl, .offcanvas-size-xl {
+    min-width: 80%;
+  }
+
+}

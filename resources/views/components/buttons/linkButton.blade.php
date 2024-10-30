@@ -1,0 +1,1 @@
+<a href="{{ $href }}" {{ $attributes->merge(['class' => 'btn rounded-pill mx-1 px-4']) }}>{{ $nome }}</a>

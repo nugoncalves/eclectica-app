@@ -1,0 +1,56 @@
+{
+    "name": "laravel-portugal/locale",
+    "description": "Resources lang em Português",
+    "keywords": ["laravel-portugal", "laravel", "locale", "lang", "language", "localization"],
+    "homepage": "https://github.com/laravel-portugal/locale",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Caneco",
+            "email": "caneco@me.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Francisco Madeira",
+            "email": "xico2k@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.34|^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.2",
+        "pestphp/pest": "^1.22",
+        "orchestra/testbench": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelPortugal\\Locale\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelPortugal\\Locale\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelPortugal\\Locale\\LocaleServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

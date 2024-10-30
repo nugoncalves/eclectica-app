@@ -1,0 +1,32 @@
+<!-- LISTA DE COLOCAÇÕES EM LEILÕES DO ITEM DE CONTRATO -->
+
+<x-formCard class="mb-3">
+
+  <x-infoCard.title title="Colocações em Leilão [ {{ $lote->items_leilao_count }} ]" />
+
+  <x-infoCard.infoTable>
+    <x-slot:tableHeader>
+      <th class="p-xtra-small text-center">Leilão</th>
+      <th class="p-xtra-small text-center">Lote</th>
+      <th class="p-xtra-small text-end">Base</th>
+      <th class="p-xtra-small text-end">Martelo</th>
+    </x-slot:tableHeader>
+    <x-slot:tableBody>
+      @foreach($itemsLeilao as $item)
+      <tr style="transform: rotate(0);" class="
+          {{$item->status=='vendido' ? 'table-success' : '' }}
+          {{$item->status=='anulado' ? 'table-danger' : '' }}
+          {{$item->status=='retirado' ? 'table-warning' : '' }}
+        ">
+        <td class="p-xtra-small text-center">{{$item->leilao_id}}</td>
+        <td class="p-xtra-small text-center">{{$item->leilao_lote}}</td>
+        <td class="p-xtra-small text-end">{{$item->start_price}} €</td>
+        <td class="p-xtra-small text-end">{{$item->price}} €</td>
+        <td>
+          <a href="javascript:void(0)" class="stretched-link text-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_colocacoes" aria-controls="offcanvas_colocacoes" hx-get="/historico/{{ $item->id }}" hx-target="#htmx_colocacoes" hx-sync="this:replace" hx-swap="innerHTML"></a>
+        </td>
+      </tr>
+      @endforeach
+    </x-slot:tableBody>
+  </x-infoCard.infoTable>
+</x-formCard>

@@ -1,0 +1,1 @@
+<div {{ $attributes->merge(['class'=>'col-12 fw-bold border-bottom border-dark-subtle ps-2 mb-4']) }}>{{ $title }}</div>

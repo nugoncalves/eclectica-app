@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body { 
+  margin: 0;
+  font-family: 'Crimson Text', serif;
+}
+
+.sheet-outer {
+    margin: 0;
+}
+
+/* Cria uma nova página */
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sheet-outer.A4 .sheet { 
+  width: 210mm; 
+  height: 296mm; 
+}
+
+.sheet.padding-5mm { 
+  padding: 5mm
+}
+
+
+.sheet-content{
+  padding: 5rem 8rem 5rem;
+}
+
+.page-break{
+  page-break-after: always;
+}
+
+.text-sans-serif{
+font-family: 'Lato', sans-serif;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.text-small{
+  font-size: 0.9rem;
+}
+
+.text-xsmall{
+  font-size: 0.7rem;
+}
+
+.header-logo{
+  width: 40%;
+}
+
+.header-text{
+  width: 60%;
+}
+
+@page {
+  size: A4;
+  margin: 0
+}
+
+@media print {
+  .sheet-outer.A4, .sheet-outer.A5.landscape { 
+      width: 210mm;
+  }
+
+}
+
+@media screen {
+  body { 
+      background: #e0e0e0;
+      padding: 5px 
+  }
+ 
+  .sheet {
+      background: white;
+      box-shadow: 0 .5mm 2mm rgba(0,0,0,.3); 
+      margin: 5mm auto;
+  }
+}
