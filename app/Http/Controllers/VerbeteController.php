@@ -304,7 +304,7 @@ class VerbeteController extends Controller
 
     public function translateToEnglish($comment)
     {
-        $apiKey = 'AIzaSyCo5vfyREqYP7sJHevNUdoaZ_6A9Dc_zmk';
+        $apiKey = 'Example apiKEY';
         $url = 'https://translation.googleapis.com/language/translate/v2?key=' . $apiKey;
         $data = array(
             'q' => $comment,
